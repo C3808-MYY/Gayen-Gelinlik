@@ -1,9 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
-  
+  font-family: "Source Sans Pro", sans-serif;
 }
 header {
   width: 100%;
@@ -12,60 +11,60 @@ header {
   align-items: center;
 
   img {
-    width: 8%;
+    width: 20%;
     min-width: 100px;
   }
   & > ul {
     margin-right: 150px;
     list-style-type: none;
 
-    .headerLi { 
-      font-size: 20px   ; 
+    .headerLi {
+      font-size: 20px;
       float: left;
       margin-right: 20px;
-      
-      a{
-          text-decoration: none;
-          color: salmon;
-          #heartDiv{
-            padding-left: 3px;
-            
-            display: flex;
-            // border:1px solid black;
-            #hider{
-              width:20px;
-              position: absolute;
-              background-color: white;
-              // border: 1px solid red;
-              height: 22px;
-              // z-index:10;
-            }
-            #empty{
-              margin-left:20px;
-              margin-right: 3px;
-              width: 20px;
-              transition: 0.5s;
-              overflow:auto;
-              z-index: -1;
-            }
-            #filled{
-              margin-right: 3px;
-              width: 0px;
-              transition: 0.5s;
-              overflow:auto;
 
-            }
+      a {
+        text-decoration: none;
+        color: #ff80c0;
+        font-weight: bold;
+        // letter-spacing: 1px;
+        #heartDiv {
+          padding-left: 3px;
+
+          display: flex;
+          // border:1px solid black;
+          #hider {
+            width: 20px;
+            position: absolute;
+            background-color: white;
+            // border: 1px solid red;
+            height: 22px;
+            // z-index:10;
           }
-          #heartDiv:hover #filled{
-              width: 20px;
-              transition: 0.5s;
-            }
-            #heartDiv:hover #empty{
-              margin-left: 0px;
-              // width: 0px;
-              transition: 0.5s;
-            
+          #empty {
+            margin-left: 20px;
+            margin-right: 3px;
+            width: 20px;
+            transition: 0.5s;
+            overflow: auto;
+            z-index: -1;
           }
+          #filled {
+            margin-right: 3px;
+            width: 0px;
+            transition: 0.5s;
+            overflow: auto;
+          }
+        }
+        #heartDiv:hover #filled {
+          width: 20px;
+          transition: 0.5s;
+        }
+        #heartDiv:hover #empty {
+          margin-left: 0px;
+          // width: 0px;
+          transition: 0.5s;
+        }
       }
       & > ul {
         list-style-type: none;
@@ -79,41 +78,87 @@ header {
         width: auto;
         background-color: white;
         padding: 10px;
-        li{
+        li {
           padding-bottom: 10px;
         }
-
       }
     }
     .headerLi:hover .dropdown {
       visibility: visible;
       opacity: 0.8;
-      height: 200px;
+      height: 300px;
       transition: 2s;
       background-color: rgba(118, 221, 127, 0.8);
+      z-index: 1;
     }
   }
 }
-#contact{
+#contact {
   margin-right: 0px;
 }
-#languageMenu{
+#languageMenu {
   width: 100px;
   border: none;
   color: black;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
-
 }
-#search{
-  height: 30px ;
+#search {
+  height: 30px;
   border: none;
   width: 70px;
   outline: none;
   font-size: 0.9rem;
 }
-body{
+#searcIcon {
+  height: 1px;
+}
+body {
   min-width: 800px;
 }
 
+// .items:hover{
+//   text-decoration: underline;
+//   transition: 1sn;
+// }
+
+.items {
+  display: inline-block;
+}
+
+.items::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: rgb(199, 27, 27);
+  transition: 200ms;
+}
+
+.items:hover::after {
+  width: 100%;
+}
+.circleDiv {
+  .miniPics {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    li {
+      border: 3px solid red;
+      border-radius: 50%;
+      padding: 30px;;
+      a {
+        img {
+          border-radius: 50%;
+          width: 70px;
+        }
+        span{
+          width: auto;
+          text-align: center;
+          border: 3px solid red;
+        }
+      }
+    }
+  }
+}

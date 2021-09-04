@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 header {
@@ -20,7 +20,7 @@ header {
 }
 
 header img {
-  width: 8%;
+  width: 20%;
   min-width: 100px;
 }
 
@@ -37,7 +37,8 @@ header > ul .headerLi {
 
 header > ul .headerLi a {
   text-decoration: none;
-  color: salmon;
+  color: #ff80c0;
+  font-weight: bold;
 }
 
 header > ul .headerLi a #heartDiv {
@@ -105,10 +106,11 @@ header > ul .headerLi > ul li {
 header > ul .headerLi:hover .dropdown {
   visibility: visible;
   opacity: 0.8;
-  height: 200px;
+  height: 300px;
   -webkit-transition: 2s;
   transition: 2s;
   background-color: rgba(118, 221, 127, 0.8);
+  z-index: 1;
 }
 
 #contact {
@@ -132,7 +134,56 @@ header > ul .headerLi:hover .dropdown {
   font-size: 0.9rem;
 }
 
+#searcIcon {
+  height: 1px;
+}
+
 body {
   min-width: 800px;
+}
+
+.items {
+  display: inline-block;
+}
+
+.items::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: #c71b1b;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.items:hover::after {
+  width: 100%;
+}
+
+.circleDiv .miniPics {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circleDiv .miniPics li {
+  border: 3px solid red;
+  border-radius: 50%;
+  padding: 30px;
+}
+
+.circleDiv .miniPics li a img {
+  border-radius: 50%;
+  width: 70px;
+}
+
+.circleDiv .miniPics li a span {
+  width: auto;
+  text-align: center;
+  border: 3px solid red;
 }
 /*# sourceMappingURL=style.css.map */
